@@ -93,7 +93,7 @@ struct sockaddr_in socketConfig(int avalibleSocket) {
         perror("Socket [sin_family] not correctly allocated.\n");
         return server_addr;
     }
-    if (server_addr.sin_port != htons(9001)) {
+    if (server_addr.sin_port != htons(avalibleSocket)) {
         perror("Socket [sin_port] not correctly allocated.\n");
         return server_addr;
     }
